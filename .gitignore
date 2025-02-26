@@ -1,2 +1,9 @@
 devel/
 build/
+/*
+!/src
+
+/src/*
+!/src/fullurdf3
+!/src/*.cpp
+!/src/CMakeLists.txt
