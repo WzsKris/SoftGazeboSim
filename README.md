@@ -1,2 +1,0 @@
-# quadruped
-# Workspace

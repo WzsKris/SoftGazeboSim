@@ -1,5 +1,0 @@
-string joint_name
-float64 friction
----
-bool success
-string message

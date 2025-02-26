@@ -1,5 +1,0 @@
-string joint_name
-float64 damping   # New damping value to set
----
-bool success      # True if damping was successfully updated, false otherwise
-string message    # Message describing the result
