@@ -37,6 +37,8 @@ Step #1: Open a terminal and launch the Gazebo model
   roslaunch fullurdf3 control.launch
 ```
   Step #3: Open a 3rd new terminal and launch the necessary scripts either for joint-control of stiffness/damping-control
+  
+```bash  
   cd ~/src/fullurdf3/scripts
   python3 stiffness_value.py
   python3 damping_value.py
