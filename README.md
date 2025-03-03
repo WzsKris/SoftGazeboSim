@@ -24,15 +24,21 @@ sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
 Step #1: Open a terminal and launch the Gazebo model 
 
 ```bash
-  cd ~/src
+  catkin_make
   source devel/setup.bash
+  cd ~/src
   roslaunch fullurdf3 gazebo.launch
 ```
-  Step #2: Open two new terminals and launch position publication and spawn the obstacles for visual reference
+  Step #2: Open a 2nd new terminal and launch position publication and effort controllers
 
 ```bash
   cd ~/src
   source devel/setup.bash
+  roslaunch fullurdf3 control.launch
+```
+  Step #3: Open a 3rd new terminal and launch the necessary scripts either for joint-control of stiffness/damping-control
   cd ~/src/fullurdf3/scripts
-  python3 legs.py
+  python3 stiffness_value.py
+  python3 damping_value.py
+  python3 increment.py
 ```
