@@ -27,7 +27,7 @@ Step #1: Open a terminal and launch the Gazebo model
   cd ~/src
   source devel/setup.bash
   roslaunch fullurdf3 gazebo.launch
-
+```
   Step #2: Open two new terminals and launch position publication and spawn the obstacles for visual reference
 
 ```bash
