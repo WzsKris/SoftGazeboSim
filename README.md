@@ -44,3 +44,6 @@ Step #1: Open a terminal and launch the Gazebo model
   python3 damping_value.py
   python3 increment.py
 ```
+```bash
+stiffness_client.cpp
+```
