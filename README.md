@@ -47,3 +47,6 @@ Step #1: Open a terminal and launch the Gazebo model
 ```bash
 stiffness_client.cpp
 ```
+**ROS controller tutorial link**
+
+https://classic.gazebosim.org/tutorials?tut=ros_control
