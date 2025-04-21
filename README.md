@@ -1,13 +1,28 @@
 # SoftGazeboSim
 ## Major requirements
-Ubuntu 20.04.3 LTS (Desktop Version), ROS Noetic, Gazebo (Version 11)
+- **Operating System**: Ubuntu 20.04.3 LTS (Desktop Version)  
+- **ROS Distribution**: ROS Noetic Ninjemys  
+- **Simulation Engine**: Gazebo (Version 11)
 
+---
 
 **Instructions**
 
 1) Download or clone the repo
+
+```bash
+git clone https://github.com/WzsKris/SoftGazeboSim.git
+cd SoftGazeboSim
+```
+
 2) Open a terminal inside the repo directory
 3) source the setup.bash file. You will need to do this every time before you launch and .launch files mentioned below
+```bash
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
+sudo apt update
+sudo apt-get install ros-noetic-ros-control ros-noetic-ros-controllers
+```
 
 4) If controller packages are not installed, please follow the following commands and install ros controller packages
 
@@ -45,8 +60,20 @@ Step #1: Open a terminal and launch the Gazebo model
   python3 increment.py
 ```
 ```bash
-stiffness_client.cpp
+rosrun fullurdf3 stiffness_client
 ```
 **ROS controller tutorial link**
 
 https://classic.gazebosim.org/tutorials?tut=ros_control
+
+## Project Structure
+SoftGazeboSim/
+├── src/
+│   └── fullurdf3/
+│       ├── launch/              # gazebo.launch, control.launch
+│       ├── urdf/                # Robot description files
+│       ├── config/              # Controller configurations
+│       ├── scripts/             # Python control scripts
+│       └── src/                 # C++ control clients
+├── devel/                       # Workspace build outputs
+└── README.md
